@@ -1,8 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'; 
+import $ from 'jquery'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+window.jquery = $;
+window.$ = $;
 
 ReactDOM.render(
   <React.StrictMode>
