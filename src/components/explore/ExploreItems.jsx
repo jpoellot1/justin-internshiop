@@ -4,7 +4,6 @@ import AuthorImage from "../../images/author_thumbnail.jpg";
 import nftImage from "../../images/nftImage.jpg";
 import axios from "axios";
 import Skeleton from "../UI/Skeleton"
-import CountdownTimer from "../UI/CountdownTimer"
 import Nft from "../UI/Nft";
 
 const ExploreItems = () => {
