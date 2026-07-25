@@ -9,6 +9,7 @@ import Nft from "../UI/Nft";
 const ExploreItems = () => {
   const [exploreItems, setExploreItems] = useState([])
   const [loading, setLoading] = useState(true)
+  const [itemCount, setItemCount] = useState(8)
 
   async function fetchExploreItemsApi() {
     const {data} = await axios.get(`https://us-central1-nft-cloud-functions.cloudfunctions.net/explore?filter=likes_high_to_low`)
@@ -18,6 +19,11 @@ const ExploreItems = () => {
   useEffect(() => {
     fetchExploreItemsApi()
   },[])
+
+  function loadMore(event) {
+    event.preventDefault();
+    setItemCount((prevCount) => prevCount + 4)
+  }
 
   return (
     <>
@@ -30,8 +36,9 @@ const ExploreItems = () => {
         </select>
       </div>
         <>
-          {exploreItems.map((exploreItem, index) => (
+          {exploreItems.slice(0, itemCount).map((exploreItem, index) => (
               <div
+                key={exploreItem.id}
                 className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
                 style={{ display: "block", backgroundSize: "cover" }}
               >
@@ -48,11 +55,12 @@ const ExploreItems = () => {
               </div>
             ))}
       </>
+      {itemCount < exploreItems.length && (
       <div className="col-md-12 text-center">
-        <Link to="" id="loadmore" className="btn-main lead">
+        <Link to="" id="loadmore" className="btn-main lead" onClick={loadMore}>
           Load more
         </Link>
-      </div>
+      </div>)}
     </>
   );
 };
