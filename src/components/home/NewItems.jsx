@@ -6,6 +6,7 @@ import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import Skeleton from "../UI/Skeleton";
+import Nft from "../UI/Nft";
 
 const NewItems = () => {
   const [newItems, setNewItems] = useState([])
@@ -94,7 +95,7 @@ const NewItems = () => {
               </>
             ) :
               <>
-              {newItems.map((newItem) => (
+              {newItems.map((newItem) =>
                 <div key={newItem.id}>
                   <div className="nft__item">
                     <div className="author_list_pp">
@@ -147,8 +148,7 @@ const NewItems = () => {
                     </div>
                   </div>
                 </div>
-              ))
-              }
+              )}
               </>
           }
         </OwlCarousel>
