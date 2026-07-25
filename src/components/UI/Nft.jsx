@@ -2,15 +2,10 @@ import React, {useState, useEffect} from 'react'
 import CountdownTimer from './CountdownTimer'
 import { Link } from 'react-router-dom'
 
-const Nft = ({id, authorId, authorImage, nftImage, nftId, title, price, likes, expiryDate}) => {
+const Nft = ({authorId, authorImage, nftImage, nftId, title, price, likes, expiryDate}) => {
   return (
     <>
     {
-        <div
-          key={id}
-          className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
-          style={{ display: "block", backgroundSize: "cover" }}
-        >
           <div className="nft__item">
             <div className="author_list_pp">
               <Link
@@ -57,7 +52,6 @@ const Nft = ({id, authorId, authorImage, nftImage, nftId, title, price, likes, e
               </div>
             </div>
           </div>
-        </div>
       }
     </>
   )

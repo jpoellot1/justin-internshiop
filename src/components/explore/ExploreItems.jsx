@@ -29,20 +29,25 @@ const ExploreItems = () => {
           <option value="likes_high_to_low">Most liked</option>
         </select>
       </div>
-      {exploreItems.map((exploreItem, index) => (
+        <>
+          {exploreItems.map((exploreItem, index) => (
+              <div
+                className="d-item col-lg-3 col-md-6 col-sm-6 col-xs-12"
+                style={{ display: "block", backgroundSize: "cover" }}
+              >
                 <Nft
-                id={exploreItem.id}
-                authorId={exploreItem.authorId}
-                authorImage={exploreItem.authorImage}
-                nftId={exploreItem.nftId}
-                nftImage={exploreItem.nftImage}
-                title={exploreItem.title}
-                price={exploreItem.price}
-                likes={exploreItem.likes}
-                expiryDate={exploreItem.expiryDate}
-                />
-              ))
-      }
+                  authorId={exploreItem.authorId}
+                  authorImage={exploreItem.authorImage}
+                  nftId={exploreItem.nftId}
+                  nftImage={exploreItem.nftImage}
+                  title={exploreItem.title}
+                  price={exploreItem.price}
+                  likes={exploreItem.likes}
+                  expiryDate={exploreItem.expiryDate}
+                  />
+              </div>
+            ))}
+      </>
       <div className="col-md-12 text-center">
         <Link to="" id="loadmore" className="btn-main lead">
           Load more
