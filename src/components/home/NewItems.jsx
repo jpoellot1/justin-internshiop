@@ -30,13 +30,23 @@ const NewItems = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
-              <h2>New Items</h2>
-              <div className="small-border bg-color-2"></div>
+              <h2
+              data-aos="fade-in"
+              data-aos-duration="500"
+              data-aos-easing="ease-in"
+              >New Items</h2>
+              <div className="small-border bg-color-2"
+              data-aos="fade-in"
+              data-aos-duration="500"
+              data-aos-easing="ease-in"
+              ></div>
             </div>
           </div>
           <OwlCarousel
                       className="owl-theme"
                       loop
+                      data-aos="fade-up"
+                      data-aos-duration="700"
                       items={4}
                       nav={true}
                       margin={10}
