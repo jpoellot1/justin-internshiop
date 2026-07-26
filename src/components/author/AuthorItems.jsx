@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import Nft from "../UI/Nft";
 
 const AuthorItems = ({authorId, authorImage, nftCollection}) => {
