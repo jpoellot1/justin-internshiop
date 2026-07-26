@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import CountdownTimer from './CountdownTimer'
 import { Link } from 'react-router-dom'
 

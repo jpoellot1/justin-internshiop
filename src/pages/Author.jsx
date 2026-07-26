@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import AuthorBanner from "../images/author_banner.jpg";
 import AuthorItems from "../components/author/AuthorItems";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import Followers from "../components/UI/Followers";
 import Skeleton from "../components/UI/Skeleton";
